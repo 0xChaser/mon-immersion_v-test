@@ -13,9 +13,9 @@ includeFileBasedOnRole();
 
 
 if (isset($_POST['formsend'])) {
-    $nniAgent = getNNIFromSession($userInfo);
-    $agent = getFormattedNameFromSession($userInfo);
-    $emailAgent = getEmailFromSession($userInfo);
+    $nniAgent = getNNIFromSession();
+    $agent = getFormattedNameFromSession();
+    $emailAgent = getEmailFromSession();
     $categorie = $_POST['categorie_info'] ?? '';
     $description_remarques = $_POST['description_remarques'] ?? '';
     $etat  = "En attente de traitement" ;

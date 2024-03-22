@@ -71,9 +71,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             <th>Heure de fin</th>
             <th>Feedback</th>
             <th>Statut</th>
-            <?php if ($userRole === "XIB_MANAGER" || $userRole === "XIB_ADMINISTRARTEUR") :  ?>
-            <th>Etat</th>
-            <?php endif; ?>
         </tr>
 
         <?php foreach ($immersions as $immersion) : ?>
@@ -112,35 +109,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
             <td><?= $immersion['statut']; ?></td>
-
-            <?php if ($userRole === "XIB_MANAGER" || $userRole === "XIB_ADMINISTRATEUR") : ?>
-                <td>
-                    <?php
-                    $immersionId = $immersion['id_immersion'];
-                    $approveUrl = "approve.php?id_immersion=$immersionId";
-                    $rejectUrl = "reject.php?id_immersion=$immersionId";
-                    $cancelUrl = "cancel.php?id_immersion=$immersionId";
-                    ?>
-                    
-                    <?php if ($immersion['statut'] === "En Attente d'Approbation Managériale") : ?>
-                        <a href="<?= $approveUrl; ?>">
-                            <button class="yes">Approuver</button>
-                        </a>
-                        <a href="<?= $rejectUrl; ?>">
-                            <button class="no">Rejeter</button>
-                        </a>
-                    <?php elseif ($immersion['statut'] === "Approuvée par le manager") : ?>
-                        <a href="<?= $cancelUrl; ?>">
-                            <button class="no">Annulation</button>
-                        </a>
-                        <?php elseif ($immersion['statut'] === "Refusée par le manager" || $immersion['statut'] === "Annulée par le manager" ) : ?>
-                        <a href="<?= $approveUrl; ?>">
-                            <button class="yes">Approuver</button>
-                        </a>
-                    <?php endif; ?>
-                </td>
-            <?php endif; ?>
-
 
 
         </tr>

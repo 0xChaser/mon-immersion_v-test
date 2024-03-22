@@ -7,14 +7,12 @@ session_start();
 require_once "../database/config.php";
 
 
-$userInfo = $_SESSION['userInfo'];
 includeFileBasedOnRole();
-redirectToHomeIfNoRole();
 
-$FSDUM_agent = GetCodeFsdumOfAgent($userInfo);
-$nni = getNNIFromSession($userInfo);
-$formattedName = getFormattedNameFromSession($userInfo);
-$email =  getEmailFromSession($userInfo) ;
+$FSDUM_agent = GetCodeFsdumOfAgent();
+$nni = getNNIFromSession();
+$formattedName = getFormattedNameFromSession();
+$email =  getEmailFromSession() ;
 
 
 $connexion = connect();
