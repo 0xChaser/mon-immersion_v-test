@@ -10,7 +10,7 @@ includeFileBasedOnRole();
 
 function getRemarques() {
     $bdd = connect();
-    $sql = "SELECT id_remarque, nni_Agent, agent, email_agent, categories, remarques, date_ajout, etat FROM Remarques";
+    $sql = "SELECT id_remarque, nni_Agent, agent, email_agent, categories, remarques, date_ajout, etat FROM remarques";
     $stmt = $bdd->query($sql);
     $remarques = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
