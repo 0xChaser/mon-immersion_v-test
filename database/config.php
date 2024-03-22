@@ -1,9 +1,14 @@
 <?php
 
-define("HOTE", 'localhost');
-define("BDD", 'flois1974934_2efkdi');
-define("UTILISATEUR",'root');
-define("MDP",'');
+define("HOTE", '185.98.131.149');
+define("BDD", 'flois1974934');
+define("UTILISATEUR",'flois1974934');
+define("MDP",'QYLFL64E1W@a');
+
+// define("HOTE", 'localhost');
+// define("BDD", 'flois1974934_2efkdi');
+// define("UTILISATEUR",'root');
+// define("MDP",'');
 
 
 function connect()
