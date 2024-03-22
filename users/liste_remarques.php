@@ -108,7 +108,6 @@ rows.forEach((row, index) => {
         <th>Remontée</th>
         <th>Date d'Ajout</th>
         <th>Etat</th>
-        <th>Action</th>
     </tr>
 
     <?php foreach ($remarques as $remarque) : ?>
@@ -121,17 +120,6 @@ rows.forEach((row, index) => {
             <td><?= htmlspecialchars($remarque['remarques']); ?></td>
             <td><?= $remarque['date_ajout']; ?></td>
             <td><?= htmlspecialchars($remarque['etat']); ?></td>
-            <td>
-                <?php if ($remarque['etat'] === 'En attente de traitement') : ?>
-                    <form class="formulaire-limite" method="post">
-                        <input type="hidden" name="id_remarque" value="<?= $remarque['id_remarque']; ?>">
-                        <input type="hidden" name="email_agent" value="<?= htmlspecialchars($remarque['email_agent']); ?>">
-                        <button class="yes" type="submit" id="yes" name="traiter">Traité</button>
-                    </form>
-                <?php else : ?>
-                    <span>Aucune action requise, retour déjà traitée.</span>
-                <?php endif; ?>
-            </td>
         </tr>
     <?php endforeach; ?>
 
