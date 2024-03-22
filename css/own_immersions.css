@@ -1,0 +1,461 @@
+* {
+    font-family: 'Enedis' !important;
+}
+
+body {
+    overflow-y: visible;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #232873;
+    text-align: center;
+    font-size: 60px ;
+    margin-top: 1.80%;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+
+
+th {
+  border: 1px solid #cecece;
+  color:  white;
+  text-align: center;
+  background-color: #232873;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+td {
+  border: 1px solid #cecece;
+  text-align: center;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+
+.yes {
+  padding: 10px;
+  background-color: #1423DC;
+  color: white;
+  border-radius: 10px;
+  width: 120px;
+  font-size: 16px;
+  border: none;
+}
+
+.no:hover, .yes:hover{
+  cursor: pointer;
+  background-color: #96CD32;
+}
+
+.no{
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 120px;
+  font-size: 16px;
+  border: none;
+}
+
+#exportButton:hover{
+  cursor: pointer;
+}
+
+.bouton_export{
+  display: flex;
+  align-self: center;
+}
+
+.go{
+  text-decoration: underline;
+  color: #1423DC;
+}
+
+.go:hover{
+  color:#96CD32;
+}
+
+
+.aucun{
+  font-family: 'Enedis';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  color: #1423DC;
+}
+
+.aucune{
+  font-family: 'Enedis';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  color: black;
+}
+
+.feedback{
+  font-family: 'Enedis';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  color: #1423DC;
+}
+
+
+
+
+
+.modal {
+    display: none;
+    width: 250px;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow-x: hidden; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    border-radius: 10px;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    font-size: 20px;
+    width: 25%;
+    color: #232873;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    text-align: center;
+    padding: 3px 16px;
+    background-color: #232873;
+    color: white;
+    border-radius: 2épx;
+  }
+  
+  .modal-body {padding: 2px 16px;
+  }
+  
+  .rating{
+    display: flex;
+    justify-content: space-evenly ;
+    align-content: center;
+    flex-direction: row;
+  }
+
+
+  .rating {
+    cursor: pointer;
+  }
+
+  
+  .info-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 35px;
+  }
+  
+  .hover-text {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+    font-size: medium;
+    color: grey;
+  }
+  
+  .info-container:hover .hover-text {
+    display: block;
+  }
+  
+  .star {
+    text-align: center;
+    font-size: 64px;
+    color: #CECECE;
+    transition: color 0.2s;
+  }
+  
+  .star:hover, .star.selected {
+  color:#96CD32;;
+  }
+  .star.selected {
+    color:#96CD32;;
+  }
+  .avis{
+    text-align: center;
+    color: #232876;
+    font-size: 20px;
+
+  }
+  .etoile {
+    text-align: center;
+    font-size: 34px;
+    color:#96CD32;
+    transition: color 0.2s;
+  }
+  
+  .etoile_non {
+    text-align: center;
+    font-size: 34px;
+    color:#464645;
+    transition: color 0.2s;
+  }
+
+  .modal-footer{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+#comment {
+  padding: 10px;
+  text-align: center;
+  color: #232876;
+  font-size: 15px;
+  min-width: 299px;
+  max-width: 442px;
+  min-width: 442px;
+  width: 442px;
+  min-height: 34px;
+  max-height: 234px;
+  font-weight: bold;
+  border: 1px solid #1423DC;
+}
+
+
+
+
+#cancelButton{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
+#cancelButton:hover{
+  background-color: #96CD32;
+  cursor: pointer;
+}
+
+#confirmButton{
+    padding: 10px;   
+    border-radius: 10px;
+    border: none;
+    background-color: #1423DC;
+    color: white;
+}
+
+#confirmButton:hover{
+    background-color: #96CD32;
+    cursor: pointer;
+}
+.note-button{
+  padding: 10px;
+  background-color: #1423DC;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.note-button:hover{
+  background-color: #96CD32;
+  cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1528px) and (max-height: 751px) {
+
+
+  table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.feedback {
+    font-family: 'Enedis';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 11px;
+    color: #1423DC;
+}
+
+th {
+  border: 1px solid #cecece;
+  color: white;
+  text-align: center;
+  background-color: #232873;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.bouton_export svg{
+  transform: scale(0.75);
+}
+
+
+h1{
+  font-size: 40px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow-x: hidden; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  border-radius: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  font-size: 12px;
+  width: 40%;
+  color: #232873;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 3px 16px;
+  background-color: #232873;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {padding: 2px 16px;}
+
+
+.star {
+  font-size: 50px;
+}
+
+.avis {
+  font-size: 15px;
+}
+
+.info-icon {
+  width: 23px;
+}
+
+#confirmButton {
+  padding: 7px;
+}
+
+#cancelButton {
+  padding: 7px;
+}
+
+#comment {
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  min-width: 299px;
+  width: 435px;
+  max-width: 475px;
+  min-width: 475px;
+  width: 475px;
+  min-height: 34px;
+  max-height: 234px;
+  font-weight: bold;
+
+}
+
+.hover-text {
+  font-size: small;
+  color: #232876;
+}
+
+}

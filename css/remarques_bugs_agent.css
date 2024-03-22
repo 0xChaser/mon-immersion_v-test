@@ -1,0 +1,226 @@
+* {
+    font-family: 'Enedis' !important;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #232876;
+}
+
+
+h1 {
+    color: #232876;
+    text-align: center;
+    margin-top: 1.80%;
+    font-size: 60px;
+}
+
+
+h2 {
+    font-size: 40px;
+    margin-top: 15px;
+    font-weight: 1000;
+    color: #232876;
+    margin-bottom: 20px;
+}
+
+
+
+
+select {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    color: #1423DC;
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 50px 0 50px;
+    background-color: #F2F2F2;
+    border: 1px solid #1423DC;
+}
+
+
+
+
+
+form button:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #96cd32;
+}
+
+form {
+    width: 750px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #232876;
+    margin-top: 20px;
+}
+
+
+textarea {
+    color: #1423DC;
+    border-radius: 10px;
+    border: 1px solid #1423DC;
+    padding-left: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 580px;
+    max-width: 580px;
+    min-width: 580px;
+    min-height: 100px;
+    height: 250px;
+}
+
+label {
+    color: #232876;
+    display: flex;
+    align-items: center;
+
+}
+
+select {
+    width: 250px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    color: #1423DC;
+    border: 1px solid #1423DC;
+}
+
+.btn_ajout {
+    padding: 10px;
+    margin: 15px 0 10px 0;
+    background-color: #1424DC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.info-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .hover-text {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+    font-size: medium;
+    color: grey;
+  }
+  
+  .info-container:hover .hover-text {
+    display: block;
+  }
+
+@media screen and (max-width: 1528px) and (max-height: 751px) {
+
+    h1 {
+        color: #232876;
+        text-align: center;
+        margin-top: 1.80%;
+        font-size: 40px;
+    }
+    form {
+        width: 750px;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid #232876;
+        margin-top: -6px;
+    }
+
+    select {
+        width: 184px;
+        height: 30px;
+        border-radius: 8px;
+        background-color: #f2f2f2;
+        color: #1423DC;
+        border: 1px solid #1423DC;
+        font-size: 13px;
+    }
+
+
+    h2 {
+        font-size: 29px;
+        margin-top: 15px;
+        font-weight: 1000;
+        color: #232876;
+        margin-bottom: 20px;
+    }
+
+
+    label {
+        display: block;
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #232876;
+    }
+
+    textarea {
+        color: #1423DC;
+        border-radius: 10px;
+        border: 1px solid #1423DC;
+        padding-left: 15px;
+        font-size: 12px;
+        margin-top: 10px;
+        width: 580px;
+        height: 50px;
+        max-width: 580px;
+        min-width: 580px;
+        min-height: 45px;
+        max-height: 250px;
+    }
+
+    .btn_ajout {
+        padding: 10px;
+        margin: 15px 0 10px 0;
+        background-color: #1424DC;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+} 
