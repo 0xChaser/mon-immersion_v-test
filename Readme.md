@@ -4,4 +4,4 @@
 
 - Utilisation de Html, Css, JavaScript, PHP, SQL
 
-Cette repositorie est un version test de l'application, aucune donnée n'est sensibles
+Cette repositori est une version test de l'application, aucune donnée présente n'est sensible
