@@ -19,6 +19,8 @@ Chaque envrionnement comporte une base de données sour MariaDB et un serveur Ro
 
 - Outil de gestion de version : Gitlab interne à l'entreprise
 
+Langages utilisés : 
+
 - Html
 - CSS
 - JavaScript
