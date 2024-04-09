@@ -15,8 +15,9 @@ Premièrement, l'application doit être simple et intuitive, permettant ainsi à
 Un environnement de Dev et un environnement pour la production,
 Chaque envrionnement comporte une base de données sour MariaDB et un serveur Rocky Linux.
 
-IDE choisi : Visual Studio Code
-Outil de gestion de version : Gitlab interne à l'entreprise
+- IDE choisi : Visual Studio Code
+
+- Outil de gestion de version : Gitlab interne à l'entreprise
 
 - Html
 - CSS
