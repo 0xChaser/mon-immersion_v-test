@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 09, 2024 at 10:22 AM
+-- Generation Time: Apr 09, 2024 at 10:31 AM
 -- Server version: 10.11.4-MariaDB-1~deb12u1
 -- PHP Version: 8.2.7
 
@@ -141,26 +141,6 @@ INSERT INTO `remarques` (`id_remarque`, `nni_Agent`, `agent`, `categories`, `rem
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
---
-
-CREATE TABLE `roles` (
-  `id_role` int(11) NOT NULL,
-  `role` varchar(25) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `roles`
---
-
-INSERT INTO `roles` (`id_role`, `role`) VALUES
-(1, 'agent'),
-(2, 'superviseur'),
-(3, 'administrateur');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -241,12 +221,6 @@ ALTER TABLE `remarques`
   ADD PRIMARY KEY (`id_remarque`);
 
 --
--- Indexes for table `roles`
---
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id_role`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -280,12 +254,6 @@ ALTER TABLE `immersions`
 --
 ALTER TABLE `remarques`
   MODIFY `id_remarque` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `roles`
---
-ALTER TABLE `roles`
-  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
