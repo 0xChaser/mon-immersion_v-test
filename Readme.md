@@ -2,6 +2,7 @@
 
 - Développé lors d'une alternance sur 2 ans 
 - Seul
+- Période de développement : Octobre 2023 - Mars 2024
 
 # Contexte et besoins 
  
