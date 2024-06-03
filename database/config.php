@@ -2,7 +2,7 @@
 
 
 define("HOTE", 'localhost');
-define("BDD", 'flois1974934_2efkdi');
+define("BDD", 'mon_immersion');
 define("UTILISATEUR",'flo_dev');
 define("MDP",'Florian123');
 
